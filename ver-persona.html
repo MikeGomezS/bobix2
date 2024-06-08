@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BOBIX</title>
+    <link rel="stylesheet" href="css/tailwind.min.css" />
+  </head>
+  <body class="min-h-100 bg-gray-200">
+    <div class="md:flex min-h-screen md:align-top">
+      <aside class="md:w-2/5 lg:w-2/6 xl:w-1/5 bg-red-600 px-5 py-10">
+        <img src="img/bobix.png" id="img-carrito" />
+        <p class="mt-10 text-white">
+          Su propósito principal es brindar apoyo en situaciones de emergencia
+          sanitaria en lugares de difícil acceso, así como en comunidades y
+          albergues marginados.
+        </p>
+        <nav class="mt-8">
+          <a
+            href="index.html"
+            class="px-3 py-1 text-white block hover:bg-red-700 hover:text-yellow-400"
+            >Listado de personas</a
+          >
+          <a
+            href="nueva-persona.html"
+            class="px-3 py-1 text-white block hover:bg-red-900 mt-2 hover:text-yellow-400 bg-red-700"
+            >Nueva Persona</a
+          >
+        </nav>
+      </aside>
+      <!--sidebar-->
+      <main class="md:w-3/5 xl:w-4/5 px-5 py-10 bg-gray-200">
+        <h2 class="text-3xl font-light text-center">Ver Datos de la Persona</h2>
+
+        <div class="flex flex-col mt-10 items-center">
+          <div
+            class="-my-2 py-2 overflow-x-auto sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 w-full"
+          >
+            <div
+              class="shadow overflow-hidden sm:rounded-lg border-b border-gray-200"
+            >
+              <form id="formulario" class="bg-white p-3">
+                <legend class="block text-blue-700 text-sm font-bold mb-2">
+                  Datos Generales
+                </legend>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="nombre"
+                    >Nombre</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    placeholder="Ingresar Nombre"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="numero"
+                    >Numero de Contacto</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="numero"
+                    name="numero"
+                    type="tel"
+                    placeholder="Ingresar Numero de Contacto"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="edad"
+                    >Edad</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="edad"
+                    name="edad"
+                    type="number"
+                    placeholder="Ingresar Edad"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="sexo"
+                    >Sexo</label
+                  >
+                  <select
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="sexo"
+                    name="sexo"
+                  >
+                    <option>-- Selecciona una opcion --</option>
+                    <option>Hombre</option>
+                    <option>Mujer</option>
+                    <option>Otro</option>
+                  </select>
+                </div>
+
+                <br />
+                <legend class="block text-blue-700 text-sm font-bold mb-2">
+                  Estado de la Persona
+                </legend>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="golpe"
+                    >¿Tiene algún golpe?</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="golpe"
+                    name="golpe"
+                    type="text"
+                    placeholder="Ingresar si tiene algún golpe"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="hemorragia"
+                    >¿Tiene algúna hemorragia?</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="hemorragia"
+                    name="hemorragia"
+                    type="text"
+                    placeholder="Ingresar si tiene algúna hemorragia"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="atrapado"
+                    >¿Se encuentra atrapado?</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="atrapado"
+                    name="atrapado"
+                    type="text"
+                    placeholder="Ingresar si se encuentra atrapado"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="malestar"
+                    >¿Tiene algún malestar?</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="malestar"
+                    name="malestar"
+                    type="text"
+                    placeholder="Ingresar si tiene algún malestar"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <p
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="adicionales"
+                  >
+                    Datos adicionales
+                  </p>
+                  <textarea
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="adicionales"
+                    name="adicionales"
+                    type="text"
+                    placeholder="Ingresar datos adicionales"
+                  ></textarea>
+                </div>
+
+                <br />
+                <legend class="block text-blue-700 text-sm font-bold mb-2">
+                  Estado Médico
+                </legend>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="ritmo"
+                    >Ritmo Cardico</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="ritmo"
+                    name="ritmo"
+                    type="number"
+                    placeholder="Ingresar ritmo cardiaco"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="temperatura"
+                    >Temperatura</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="temperatura"
+                    name="temperatura"
+                    type="number"
+                    placeholder="Ingresar temperatura"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="cronicas"
+                    >Enfermedades Crónicas</label
+                  >
+                  <input
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="cronicas"
+                    name="cronicas"
+                    type="text"
+                    placeholder="Ingresar Enfermedades Crónicas"
+                  />
+                </div>
+
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="triage"
+                    >Tipo de Triage</label
+                  >
+                  <select
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="triage"
+                    name="triage"
+                  >
+                    <option>-- Tipo de Triage --</option>
+                    <option>Resucitacion</option>
+                    <option>Emergencia</option>
+                    <option>Urgencia</option>
+                    <option>Urgencia Media</option>
+                    <option>Sin Urgencia</option>
+                  </select>
+                </div>
+
+                <br />
+                <legend class="block text-blue-700 text-sm font-bold mb-2">
+                  Estado del Proceso de la Persona
+                </legend>
+                <div class="mb-4">
+                  <label
+                    class="block text-gray-700 text-sm font-bold mb-2"
+                    for="estado"
+                    >Estado de Emergéncia</label
+                  >
+                  <select
+                    class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    id="estado"
+                    name="estado"
+                  >
+                    <option>-- Tipo de Estado --</option>
+                    <option>En Espera</option>
+                    <option>Atendido</option>
+                  </select>
+                </div>
+
+                <input
+                  href="index.html"
+                  type="submit"
+                  class="bg-teal-600 hover:bg-teal-900 w-full mt-5 p-2 text-white uppercase font-bold"
+                  value="Regresar"
+                />
+              </form>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/verpersona.js"></script>
+  </body>
+</html>
